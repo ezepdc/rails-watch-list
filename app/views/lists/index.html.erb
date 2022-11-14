@@ -10,7 +10,7 @@
   <div class="cards">
     <% @lists.each do |list| %>
       <%= link_to list_path(list), class:"text-decoration-none" do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('list_background.jpg') %>)">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://images.unsplash.com/photo-1667327940053-ec9d7f8455c4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2ODQ0NzY0NA&ixlib=rb-4.0.3&q=80&w=1000' %>)">
           <%= list.name %>
         </div>
       <% end %>
